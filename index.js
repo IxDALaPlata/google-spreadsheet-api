@@ -7,10 +7,13 @@ if (process.env.NODE_ENV === 'development') {
 require('isomorphic-fetch')
 
 const formatEvents = require('./lib/format-events')
+const formatData = require('./lib/format-data')
 const cache = require('memory-cache')
 const gsheets = require('gsheets')
 const microCors = require('micro-cors')
-const { send } = require('micro')
+const {
+    send
+} = require('micro')
 
 const cacheExpiration = parseInt(process.env.CACHE_EXPIRATION)
 const cors = microCors({
@@ -28,9 +31,9 @@ async function handler(req, res) {
             )
             // formateamos la lista de eventos para que tenga solo los datos que necesitamos
             const data = formatEvents(worksheet.data)
-
+            const dataFormatted = formatData(data)
             // guardamos los datos en cache por el tiempo indicado por configuración
-            cache.put('data', data, cacheExpiration)
+            cache.put('data', dataFormatted, cacheExpiration)
         }
 
         send(res, 200, cache.get('data'))
