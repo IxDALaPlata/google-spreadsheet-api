@@ -1,5 +1,5 @@
 {
-    "name": "google-spreadsheet-api",
+    "name": "ux-google-spreadsheet-api",
     "version": "1.0.0",
     "main": "index.js",
     "scripts": {
@@ -7,15 +7,17 @@
         "precommit": "eslint '**/*.js'",
         "start": "micro"
     },
-    "author": "durancristhian@gmail.com",
+    "author": "estebanjcoria@gmail.com",
     "license": "MIT",
     "dependencies": {
+        "color-hash": "^1.0.3",
         "dotenv": "^4.0.0",
         "gsheets": "^2.0.0",
         "isomorphic-fetch": "^2.2.1",
         "memory-cache": "^0.2.0",
         "micro": "^9.0.2",
         "micro-cors": "^0.0.4",
+        "moment": "^2.22.2",
         "moment-msdate": "^2.0.1"
     },
     "devDependencies": {
@@ -26,6 +28,6 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/meetupjs-ar/google-spreadsheet-api.git"
+        "url": "https://github.com/IxDALaPlata/google-spreadsheet-api"
     }
 }

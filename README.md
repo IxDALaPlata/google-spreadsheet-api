@@ -1,8 +1,8 @@
-# google-spreadsheet-api
+# ux-google-spreadsheet-api
 
 Microservicio que devuelve un JSON con los datos de una hoja de una Google Spreadsheet
 
-[google-spreadsheet-api](http://spreadsheet-api.now.sh/)
+Este en un Fork del proyecto google-spreadsheet-api de la gente de ## MeetupJS 
 
 ## Como funciona
 
